@@ -1,31 +1,31 @@
-package HibernateBasic1;
+package HibernateBasic2;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /*
- * Store customer using xml mapping file
+ * Store customer using annotation
  */
-
-public class Customer {
-	
+@Entity
+public class Customer2 {
+	@Id
 	private int id;
 	private String lastName;
 	private String firstName;
 	private String address;
-	
-	public Customer() {	}  //required!!!
-	/*for xml mapping, we must have the default constructor. Otherwise, you will get error:
-	 * NFO: HHH000327: Error performing load command : org.hibernate.InstantiationException: No default constructor for entity:  : HibernateBasic1.Customer
-	 */
 
-	public Customer(String firstName, String lastName, String address) {
+	public Customer2() {	}  //required
+	/* //if without this default contructor, you will get an info:
+	INFO: HHH000327: Error performing load command : org.hibernate.InstantiationException: No default constructor for entity:  : HibernateBasic2.Customer2
+
+	 */
+	public Customer2(String firstName, String lastName, String address) {
 		super();
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.address = address;
 	}
-	
+
 	public int getId() {
 		return id;
 	}

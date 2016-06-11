@@ -76,7 +76,7 @@ public class ManageCustomer {
 		if(session.get(HibernateBasic1.Customer.class, 1) !=null)  //first check if the Customer table (object) already exists or not in database
 		{
 			try{
-				String hql = " FROM Customer WHERE first_name = :fname AND last_name = :lname"; //"Customer" is the entity name here for hql. It is case-sensitive
+				String hql = " FROM Customer WHERE first_name = :fname AND last_name = :lname"; //"Customer" is the entity name (not the table name!!!) here for hql. It is case-sensitive. 
 				Query query = session.createQuery(hql);
 				query.setParameter("fname", fname);
 				query.setParameter("lname", lname);

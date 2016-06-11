@@ -29,9 +29,9 @@
         <property name="hbm2ddl.auto">update</property>  <!-- if "create", will Drop and re-create the database schema on startup  -->
 
       <!-- Mapping files, if using xml configuration file to list all the table, columns mapping-->
-        <mapping resource="customer.hbm.xml"/>
-    
-    <!-- if using annotation, no need to add the mapping file (bcz annotation will take care of -->
+      <mapping resource="HibernateBasic1/customer.hbm.xml"/>    <!-- comment out if using annotation -->
+     
+      <mapping class="HibernateBasic2.Customer2"/>  <!-- if using annotation, need to list all the entity classes -->
     
     
       
@@ -44,3 +44,8 @@
 <!-- 
 see more: http://stackoverflow.com/questions/16335279/hibernate-configuration-file
  -->
+ 
+ <!--  for mapping resource vs mapping class:
+ we can have both mapping source and mapping class in the hibernate.cfg.xml. However, it may have some problem in Unit test.
+ see: http://stackoverflow.com/questions/16479055/in-the-hibernate-cfg-xml-file-can-you-use-both-mapping-resource-and-mapping-cl
+  -->
