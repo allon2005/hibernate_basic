@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="HibernateBasic1.Customer" table="Customer"> <!-- better to give the full path for the name-->
+      <meta attribute="class-description">
+         This class contains the customer detail information. 
+      </meta>
+      <id name="id" type="int" column="id"> <!-- this is for the primary key -->
+         <generator class="native"/> <!-- how the system with generate the primary key?  "native" means hibernate will decide by itself -->
+      </id>
+      <property name="firstName" column="first_name" type="string"/> <!-- we can add "length" attribute -->
+      <property name="lastName" column="last_name" type="string"/>
+      <property name="address" column="address" type="string"/>
+   </class>
+</hibernate-mapping>
+
+<!-- 1. about id generator:
+see: http://stackoverflow.com/questions/10041938/how-to-choose-the-id-generation-strategy-when-using-hibernate
+ 
+ 2. about "length" attribute
+ see: http://stackoverflow.com/questions/3546975/what-does-length-attribute-in-hibernate-mapping-file-do
+ -->
