@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 
@@ -18,6 +19,7 @@ public class Customer8 {
 	private String lastName; 
 	private String firstName;
 	@OneToOne (cascade={CascadeType.ALL})  // this will map the phone with the customer in 1 to 1 fashion
+	@JoinColumn(name="phone_id")
 	private Phone phone;  //now, phone is not an "@Embeded, it is an @Entity, which requires its own table.  We need to connect customer with the phone
 
 	
