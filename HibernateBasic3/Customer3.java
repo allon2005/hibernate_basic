@@ -24,6 +24,7 @@ import javax.persistence.Transient;
 
 public class Customer3 {
 	@Id
+	@Column(name="customer_id")
 	private int id;
 	@Column(name="last_name")
 	private String lastName;
