@@ -43,6 +43,8 @@
         
          <mapping class="HibernateBasic6.Customer6" />  <!-- if using annotation, need to list all the entity classes -->
         
+         <mapping class="HibernateBasic7.Customer7" />  <!-- if using annotation, need to list all the entity classes -->
+        
 
 	</session-factory>
 
