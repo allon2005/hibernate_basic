@@ -1,17 +1,19 @@
 package HibernateBasic2;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /*
  * Store customer using annotation
  */
-@Entity
+@Entity     //if just using "@Entity, the class name Customer2 will be used as the table name.
 public class Customer2 {
 	@Id
 	private int id;
-	private String lastName;
-	private String firstName;
+	private String lastName; //if no special annotation, the column name will be "lastName"
+	private String firstName; //if no special annotation, the column name will be "firsttName"
 	private String address;
 
 	public Customer2() {	}  //required

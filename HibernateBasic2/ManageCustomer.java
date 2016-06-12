@@ -74,7 +74,7 @@ public class ManageCustomer {
 		if(session.get(Customer2.class, 0) !=null)  //first check if the Customer2 table (object) already exists or not in database
 		{
 			try{
-				String hql = " FROM Customer2 WHERE first_name = :fname AND last_name = :lname"; 
+				String hql = " FROM Customer2 WHERE firstName = :fname AND lastName = :lname";  
 				Query query = session.createQuery(hql);
 				query.setParameter("fname", fname);
 				query.setParameter("lname", lname);
