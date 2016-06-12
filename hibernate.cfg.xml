@@ -28,23 +28,28 @@
 		<!--add data to the database, not dropping the schema -->
 		<property name="hbm2ddl.auto">create</property>  <!-- if "create", will Drop and re-create the database schema on startup -->
 
-		<!-- Mapping files, if using xml configuration file to list all the table, columns mapping -->
+		<!-- Mapping files, if using xml configuration file to list all the table, 
+			columns mapping -->
 		<mapping resource="HibernateBasic1/customer.hbm.xml" />    <!-- comment out if using annotation -->
 
 		<mapping class="HibernateBasic2.Customer2" />  <!-- if using annotation, need to list all the entity classes -->
 
 		<mapping class="HibernateBasic3.Customer3" />  <!-- if using annotation, need to list all the entity classes -->
-		
+
 		<mapping class="HibernateBasic4.Customer4" />  <!-- if using annotation, need to list all the entity classes -->
-        
-        <mapping class="HibernateBasic5.Customer5" />  <!-- if using annotation, need to list all the entity classes -->
-       
-        <!--       <mapping class="HibernateBasic5.Address" />  -->  <!-- Address is an Embedded class, no need to add it here --> 
-        
-         <mapping class="HibernateBasic6.Customer6" />  <!-- if using annotation, need to list all the entity classes -->
-        
-         <mapping class="HibernateBasic7.Customer7" />  <!-- if using annotation, need to list all the entity classes -->
-        
+
+		<mapping class="HibernateBasic5.Customer5" />  <!-- if using annotation, need to list all the entity classes -->
+
+		<!-- <mapping class="HibernateBasic5.Address" /> -->  <!-- Address is an Embedded class, no need to add it here -->
+
+		<mapping class="HibernateBasic6.Customer6" />  <!-- if using annotation, need to list all the entity classes -->
+
+		<mapping class="HibernateBasic7.Customer7" />  <!-- if using annotation, need to list all the entity classes -->
+
+		<mapping class="HibernateBasic8.Customer8" />  <!-- if using annotation, need to list all the entity classes -->
+
+		<mapping class="HibernateBasic8.Phone" />  <!-- if using annotation, need to list all the entity classes -->
+
 
 	</session-factory>
 
